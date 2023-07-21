@@ -1,0 +1,34 @@
+### Arrival of socks to the warehouse
+POST http://localhost:8080/api/socks/income
+Content-Type: application/json
+
+{
+  "color": "Red",
+  "cottonPart": 50,
+  "quantity": 10
+
+}
+
+### Release of socks from the warehouse
+POST http://localhost:8080/api/socks/outcome
+Content-Type: application/json
+
+{
+  "color": "Red",
+  "cottonPart": 50,
+  "quantity": 10
+
+}
+
+### Number of socks in stock
+### Condition lessThan
+GET http://localhost:8080/api/socks?color=Red&comparisonEnumeration=lessThan&cottonPart=90
+
+### Number of socks in stock
+### Condition equal
+GET http://localhost:8080/api/socks?color=Red&comparisonEnumeration=equal&cottonPart=90
+
+### Number of socks in stock
+### Condition moreThan
+GET http://localhost:8080/api/socks?color=Red&comparisonEnumeration=moreThan&cottonPart=90
+

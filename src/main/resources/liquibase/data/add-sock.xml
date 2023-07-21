@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+  <changeSet id="create-socks-table" author="Korolchuk Vladislav">
+
+    <preConditions onFail="MARK_RAN">
+      <tableExists tableName="socks"/>
+    </preConditions>
+
+    <insert tableName="socks">
+      <column name="color">Blue</column>
+      <column name="cotton_part">100</column>
+      <column name="quantity">15</column>
+    </insert>
+
+    <insert tableName="socks">
+      <column name="color">Red</column>
+      <column name="cotton_part">90</column>
+      <column name="quantity">2</column>
+    </insert>
+
+    <insert tableName="socks">
+      <column name="color">White</column>
+      <column name="cotton_part">90</column>
+      <column name="quantity">5</column>
+    </insert>
+
+  </changeSet>
+
+</databaseChangeLog>
