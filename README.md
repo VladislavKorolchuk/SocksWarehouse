@@ -69,3 +69,15 @@ HTTP request result:
 ### Socks Warehouse API: ###
 
 http://localhost:8080/swagger-ui/index.html
+
+***
+
+  ## Application assembly
+
+git clone https://github.com/VladislavKorolchuk/SocksWarehouse.git \
+cd SocksWarehouse \
+mvn package \
+cd target
+
+## Launch
+java -jar SocksWarehouse.jar
